@@ -25,8 +25,9 @@ public class UserController {
         return ResponseEntity.ok().body(userService.findAllGroups(id));
     }
 
-    @PostMapping("/create")
-    public ResponseEntity<User> createUser(@Valid @RequestBody UserDto userDto){
-        return ResponseEntity.ok().body(userService.createUser(userDto));
+    @GetMapping
+    public ResponseEntity<String> testingSecureEndpoints(){
+        return ResponseEntity.ok("Test successful.");
     }
+
 }
